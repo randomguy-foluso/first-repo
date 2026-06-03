@@ -12,5 +12,6 @@ lon = geo_data["results"][0]["longitude"]
 response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=" + str(lat) + "&longitude=" + str(lon) + "&current_weather=true")
 data = response.json()
 
+print(f"weather in {city}:")
 print("temperature:", data["current_weather"]["temperature"])
 print("windspeed:", data["current_weather"]["windspeed"])
